@@ -1,0 +1,373 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+    @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+            html, body {
+                height:100%;
+                width:100%;
+                overflow: hidden;
+                padding: 0px;
+                margin: 0px;
+                font-size: 16px;  
+                line-height: 20px;
+                font-family: 'Cutive Mono', georgia, serif;
+            }
+
+
+            body, #modal{
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: rgb(30,30,30);
+            }
+        
+
+            .left{float:left !important;}
+            .right{float:right !important;}
+
+            .hidden {
+                display: none !important;
+                visibility: hidden;
+                opacity:0;
+            }
+
+            .scrollbox{
+                overflow-y:auto; 
+                pointer-events: all;
+            }
+
+            .focalpoint{
+                position: absolute;
+                max-width: initial;
+                @include transform-origin(0,0);
+            }
+
+
+/// Container styles /////////////////////////////////////////////////////////////
+
+        
+        .content{
+            @include fill();
+            top:$topbar-height; 
+        }
+
+        .controls{
+            @include fill();
+            // z-index: 5;
+        }
+
+
+/// Buttons /////////////////////////////////////////////////////////////
+
+        button{
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.9);
+            font-size: 14px;
+            line-height: 26px;
+            height: 28px;
+            padding: 0 6px;
+            text-align: center;
+            min-width: 28px;
+            pointer-events:all;
+            z-index: 5;
+            cursor: pointer;
+        }
+
+        .btn{
+                background-color: rgba(0,0,0,0.3);
+                color: #fff;
+                // border:1px solid rgba(255, 255, 255, 0.5);
+                display: block;
+                width:40px;
+                height:40px;
+                text-align: center;
+                text-decoration: none;
+                background-clip: padding-box;
+                cursor: pointer;
+
+                @include breakpoint(small){
+                    background-color: rgba(0,0,0,0.8);
+                    // border:1px solid rgba(255,255,255,0.2);
+                    @include transition(background-color .25s ease);
+
+                    &:hover, &:focus{
+                        background-color: rgba(100,100,100,.5);
+                    }
+                    
+                    &.active{
+                        background-color:rgba(120,120,120,0.8);
+                    }
+                }
+            }
+
+        .prevbutton, .nextbutton{
+            width:50%;
+            height:50%;
+            top:25%;
+            position: absolute;
+            background-color: transparent;
+            border:0;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            .btn{
+                position: absolute;
+                top: 50%;
+                margin-top: -35px;
+                width: 30px;
+                line-height: 40px;
+                height: auto;
+                padding-top: 2px;
+                box-shadow: 0 0 25px rgba(255,255,255,0.05);
+
+                @include breakpoint(small){
+                    margin-top: -28px;
+                    width: 40px;
+                    line-height: 56px;
+                }
+                @include breakpoint(medium){
+                    margin-top: -35px;
+                    width: 50px;
+                    line-height: 70px;
+                }
+            }
+        }
+
+        .prevbutton{right:initial; left:0; .btn{ left:0;}}
+        .nextbutton{left:initial; right:0;  .btn{ right:0;}}
+
+        .prevbutton.btn, .nextbutton.btn{ right:0; border-right: 0;}
+
+        #loadingoverlay{
+            background: url(../assets/loading.png) no-repeat center;
+            background-size: 320px 490px;
+            background-color:rgba(0,0,0,1);
+            z-index:100;
+            @include fill();
+            @include transition(opacity 500ms linear);
+            opacity:1;
+
+            &.complete{
+                opacity:0;
+                pointer-events: none;
+            
+                .no-pointerevents &{ display:none; };
+            }
+
+            span{ 
+                font-family: serif;
+                position:absolute;
+                top:50%;
+                margin-top:-35px;
+                width:100%;
+                color:rgba(255,255,255,0.5);
+                text-align: center;
+                font-size:70px;
+                line-height: 30px;
+                letter-spacing: -3px;
+                @include animation(throb 800ms linear 200ms infinite);
+
+                &:before{
+                    content:".";
+                    @include animation(throb 800ms linear 0 infinite);
+                }
+                &:after{
+                    content:".";
+                    @include animation(throb 800ms linear 400ms infinite);
+                }
+            }
+        }
+
+        @include keyframes(throb) {
+          0% {  color:rgba(255,255,255,0.5); }
+          50% { color:rgba(255,255,255,1); } 
+          100% {color:rgba(255,255,255,0.5); }
+        }
+
+
+        #shareoverlay{
+            background-color:rgba(120,120,120,0.8);
+            z-index:99;
+            @include fill();
+            @include transition(opacity 500ms linear);
+            opacity:0;
+            pointer-events: none;
+            
+            .no-pointerevents &{ display:none; }
+
+            @include breakpoint(small){
+                bottom:$bottombar-height;
+                height:auto;
+            }
+
+            &.active{
+                display:block;
+                pointer-events: all;
+                opacity:1;
+            }
+            
+            & > .modal{
+                background-color: #fff;
+                @include border-radius(3px);
+                @include fill();
+                margin: auto;
+                width: 400px;
+                max-width: 90%;
+                height: 260px;
+                max-height: 90%;
+                padding:2em 1.5em 1em;
+
+                
+            }
+        }
+
+        .socials{
+            margin:auto;
+        }
+        
+        .socials td, .socials th{ 
+            border-bottom:1px solid #ccc; 
+            padding: 8px 0;
+        }
+        .socials tr:last-child{ 
+            td,th{border:0;}
+        }
+
+        .socials th{;
+            text-align: right;
+            font-family: $header-font-family;
+            font-weight: $header-font-weight;
+            font-style: $header-font-style;
+            color: $header-font-color;
+            text-rendering: $header-text-rendering;
+        }
+
+        .socials td{
+            padding-left:8px;
+            vertical-align: middle;
+        }
+
+        .socials input[type=text], .socials textarea{
+            width:100%;
+            max-height:3em;
+            border: 1px solid #888;
+            resize: none; 
+        }
+
+        .socials a.visit-us{
+            float:left; 
+            margin-right:8px;
+            @include transition(opacity .25s ease);
+        }
+
+        .socials a.visit-us:hover{ opacity:0.5 }
+
+        .close-modal{
+            font-size: 1.375em;
+            line-height: 1;
+            position: absolute;
+            top: 0.5em;
+            right: 0.6875em;
+            color: #aaaaaa;
+            font-weight: bold;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: -moz-none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .bottombar{
+            font-family:arial, serif;
+            font-size:12px;
+            position:absolute;
+            width:100%; height:$bottombar-height;
+            bottom:0; left:0; right:0;
+            box-shadow: 0 0 25px rgba(255,255,255,0.05);
+
+            @include transform(translateY(42px));
+
+            @include transition(all 500ms ease-out);
+        }
+
+        .bottombar.active{
+            @include transform(translateY(0));
+        }
+
+        .page-number{
+            width:55px;
+            height:$bottombar-height;
+            background-color: rgba(255,255,255,0.5);
+            color: #000;
+            border-top:1px solid rgba(255,255,255,0.5);
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            line-height: $bottombar-height;
+            text-align: center;
+            text-decoration: none;
+            background-clip: padding-box;
+        }
+        
+        .bottombar .fullscreen.btn, .bottombar .share.btn{ 
+            position: absolute;
+            bottom: 0;
+            width: 40px; 
+            height: $bottombar-height;
+            line-height: $bottombar-height - 1;
+            border-width: 1px 0 0 1px;
+        }
+
+        .share.btn{
+            .bottombar &{ right: 55px; }
+
+            & > div{
+                border:1px solid #fff;
+                border-color: #fff #fff transparent transparent;
+                width:10px; height:10px;
+                position:absolute;
+                @include transform(rotate(45deg));
+                top: 50%;
+                left: 50%;
+                margin: -5px 0 0 -7px;
+
+
+
+                div{
+                    width:0; 
+                    height:0; 
+                    border:2px solid #fff; 
+                    @include border-radius(5px);
+                    position: absolute;
+
+                    &:nth-child(1){top:-2px; left:-2px;}
+                    &:nth-child(2){top:-2px; right:-2px;}
+                    &:nth-child(3){bottom:-2px; right:-2px;}
+                }
+            }
+        }
+
+        .fullscreen.btn{
+            right: 95px;
+            
+            div{
+                border:2px solid #fff;
+                width:4px; height:4px;
+                position:absolute;
+                &:nth-child(1){top:11px; left:11px; border-width: 2px 0 0 2px}
+                &:nth-child(2){top:11px; right:11px; border-width: 2px 2px 0 0}
+                &:nth-child(3){bottom:11px; left:11px; border-width: 0 0 2px 2px}
+                &:nth-child(4){bottom:11px; right:11px; border-width: 0 2px 2px 0}
+            }
+
+        }
+
+        .no-fullscreen .fullscreen.btn{ display:none; }
+
+        html:-moz-full-screen .fullscreen.btn{ display:none; }
+        html:-webkit-full-screen .fullscreen.btn{ display:none; }
+        html:fullscreen .fullscreen.btn{ display:none; }

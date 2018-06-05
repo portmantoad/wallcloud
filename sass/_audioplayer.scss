@@ -1,0 +1,282 @@
+        .audioplayer{
+            height: $bottombar-height; /* 40 */
+            color: #fff;
+            position: absolute;
+            bottom:0;
+            left:0;
+            right:135px;
+            z-index: 1;
+            background-color: rgba(0,0,0,0.3);
+            color: #fff;
+            // border-top:1px solid rgba(255,255,255,0.5);
+
+            @include breakpoint(small){
+                    background-color: rgba(0,0,0,0.8);
+            }
+        }
+
+        .no-fullscreen .audioplayer{ right:95px; }
+
+        html:-moz-full-screen .audioplayer{ right:95px; }
+        html:-webkit-full-screen .audioplayer{ right:95px; }
+        html:fullscreen .audioplayer{ right:95px; }
+
+
+            /* mini mode (fallback) */
+
+            .audioplayer-mini{
+                width: 40px; /* 40 */
+                margin: 0 auto;
+            }
+
+
+            /* player elements: play/pause and volume buttons, played/duration timers, progress bar of loaded/played */
+            .audioplayer > div{ position: absolute; }
+
+
+            /* play/pause button */
+            .audioplayer-playpause{
+                width: 40px;
+                height: 100%;
+                text-align: left;
+                text-indent: -9999px;
+                cursor: pointer;
+                z-index: 2;
+                top: 0;
+                left: 0;
+            }
+                .audioplayer:not(.audioplayer-mini) .audioplayer-playpause{
+                    // border-right: 1px solid #666;
+                    // border-right-color: rgba( 255, 255, 255, .3 );
+                }
+                .audioplayer-mini .audioplayer-playpause{
+                    width: 100%;
+                }
+                .audioplayer-playpause:hover,
+                .audioplayer-playpause:focus{
+                    background-color: rgba(255,255,255,0.2);
+                }
+                .audioplayer-playpause a{
+                    display: block;
+                }
+                .audioplayer-stopped .audioplayer-playpause a{
+                    width: 0;
+                    height: 0;
+                    border: 8px solid transparent; /* 8 */
+                    border-right: none;
+                    border-left-color: #fff;
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: -8px 0 0 -4px; /* 8 4 */
+                }
+                .audioplayer-playing .audioplayer-playpause a{
+                    width: 12px; /* 12 */
+                    height: 12px; /* 12 */
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: -6px 0 0 -6px; /* 6 */
+                }
+                    .audioplayer-playing .audioplayer-playpause a:before,
+                    .audioplayer-playing .audioplayer-playpause a:after{
+                        width: 4px;
+                        height: 100%;
+                        background-color: #fff;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                    }
+                    .audioplayer-playing .audioplayer-playpause a:before{
+                        left: 0;
+                    }
+                    .audioplayer-playing .audioplayer-playpause a:after{
+                        right: 0;
+                    }
+
+
+            /* timers */
+
+            .audioplayer-time{
+                
+                height: 100%;
+                line-height: $bottombar-height; /* 38 */
+                z-index: 2;
+                top: 0;
+                float: right;
+            }
+                .audioplayer-time-current{
+                    right: 40px; /* 40 */
+                    
+                    &:after{content:"  /  "}
+                }
+
+                @media (min-width: 462px) {
+                    .audioplayer-time-current:before{content:"Young Unknowns – I Want To Lose  •  "; color:#BFBDC9;}
+                }
+
+                .audioplayer-time-duration{
+                    width: 38px;
+                    right: 0px; 
+                }
+
+
+            /* progress bar of loaded/played */
+
+            .audioplayer-bar{
+                height: 100%; 
+                cursor: pointer;
+                z-index: 1;
+                top: 0;
+                left: 40px;
+                right: 0px; 
+                @include breakpoint(small){ left:80px; }
+            }
+
+
+            
+                .audioplayer-novolume .audioplayer-bar{
+                    left: 40px;
+                }
+                .audioplayer-bar div{
+                    width: 0;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                .audioplayer-bar-loaded{
+                    background-color: rgba(116,116,116, .4 );
+                    z-index: 1;
+                }
+                .audioplayer-bar-played{
+                    background: #2a223a;
+                    background: rgba(96, 74, 140, 0.8);
+                    z-index: 2;
+                }
+
+
+            /* volume button */
+
+
+
+            .audioplayer-volume{
+                display:none;
+                @include breakpoint(small){display: block;}
+                width: 40px;
+                height: 100%;
+                // border-left: 1px solid #111;
+                // border-left-color: rgba( 0, 0, 0, .25 );
+                // border-right: 1px solid #666;
+                // border-right-color: rgba( 255,255,255,0.3 );
+                text-align: left;
+                text-indent: -9999px;
+                cursor: pointer;
+                z-index: 2;
+                top: 0;
+                left: 40px;
+            }
+
+                .audioplayer-volume:hover,
+                .audioplayer-volume:focus{
+                    background-color: rgba(255,255,255,0.2);
+                }
+                .audioplayer-volume-button{
+                    width: 100%;
+                    height: 100%;
+                }
+                    .audioplayer-volume-button a{
+                        width: 5px; /* 5 */
+                        height: 6px; /* 6 */
+                        background-color: #fff;
+                        display: block;
+                        position: relative;
+                        z-index: 1;
+                        top: 40%;
+                        left: 35%;
+                    }
+                        .audioplayer-volume-button a:before,
+                        .audioplayer-volume-button a:after{
+                            content: '';
+                            position: absolute;
+                        }
+                        .audioplayer-volume-button a:before{
+                            width: 0;
+                            height: 0;
+                            border: 8px solid transparent; /* 8 */
+                            border-left: none;
+                            border-right-color: #fff;
+                            z-index: 2;
+                            top: 50%;
+                            right: -4px;
+                            margin-top: -8px; /* 8 */
+                        }
+                        .audioplayer:not(.audioplayer-muted) .audioplayer-volume-button a:after{
+                            /* "volume" icon by Nicolas Gallagher, http://nicolasgallagher.com/pure-css-gui-icons */
+                            width: 5px; /* 5 */
+                            height: 5px; /* 5 */
+                            border: 4px double #fff; /* 4 */
+                            border-width: 4px 4px 0 0; /* 4 */
+                            left: 9px; /* 9 */
+                            top: -1px; /* 1 */
+                            -webkit-border-radius: 0 15px 0 0; /* 15 */
+                            -moz-border-radius: 0 15px 0 0; /* 15 */
+                            border-radius: 0 15px 0 0; /* 15 */
+                            -webkit-transform: rotate( 45deg );
+                            -moz-transform: rotate( 45deg );
+                            -ms-transform: rotate( 45deg );
+                            -o-transform: rotate( 45deg );
+                            transform: rotate( 45deg );
+                        }
+
+
+                /* volume dropdown */
+
+                .audioplayer-volume-adjust{
+                    height: 100px; /* 100 */
+                    cursor: default;
+                    position: absolute;
+                    left: 0;
+                    right: -1px;
+                    top: -9999px;
+                    background: #333;
+                }
+                    .audioplayer-volume:not(:hover) .audioplayer-volume-adjust{
+                        opacity: 0;
+                    }
+                    .audioplayer-volume:hover .audioplayer-volume-adjust{
+                        top: auto;
+                        bottom: 100%;
+                    }
+                    .audioplayer-volume-adjust > div{
+                        width: 40%;
+                        height: 80%;
+                        background-color: #222;
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 1;
+                        margin: 30% auto 0;
+                    }
+                        .audioplayer-volume-adjust div div{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background: rgba(96, 74, 140, 0.8);
+                        }
+                .audioplayer-novolume .audioplayer-volume{
+                    display: none;
+                }
+
+
+            .audioplayer *,
+            .audioplayer *:before,
+            .audioplayer *:after{
+                -webkit-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                -moz-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                -ms-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                -o-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+                transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+            }

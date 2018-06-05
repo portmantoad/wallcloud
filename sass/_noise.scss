@@ -1,0 +1,80 @@
+        #texture, #texture2{
+            position: absolute;
+            pointer-events: none;
+            top:-350px;
+            left:-350px;
+            width:auto; 
+            height:auto; 
+            z-index: 1;
+            // opacity: .5;
+
+            // @include animation(noise infinite 2021ms step-end);
+        }
+
+        #texture2{
+            @include transform( translate3D(132px, 120px, 0) scale( -1,  1 )  );
+            // @include animation(noise infinite 1541ms step-end);
+        }
+
+                @include keyframes(noise) {
+
+          0%  { @include transform( translate3D(132px, 120px, 0) scale( -1,  1 )  );}
+          5%  { @include transform( translate3D(308px, 100px, 0) scale(  1, -1 )  );}
+          10% { @include transform( translate3D(198px, 260px, 0) scale( -1, -1 )  );}
+          15% { @include transform( translate3D(22px , 220px, 0) scale(  1, -1 )  );}
+          20% { @include transform( translate3D(330px, 160px, 0) scale( -1,  1 )  );}
+          25% { @include transform( translate3D(242px, 180px, 0) scale(  1,  1 )  );}
+          30% { @include transform( translate3D(220px, 0px,   0) scale(  1, -1 )  );}
+          35% { @include transform( translate3D(286px, 280px, 0) scale( -1, -1 )  );}
+          40% { @include transform( translate3D(264px, 40px,  0) scale( -1,  1 )  );}
+          45% { @include transform( translate3D(154px, 300px, 0) scale(  1, -1 )  );}
+          50% { @include transform( translate3D(88px , 60px,  0) scale( -1, -1 )  );}
+          55% { @include transform( translate3D(110px, 20px,  0) scale(  1,  1 )  );}
+          60% { @include transform( translate3D(66px , 200px, 0) scale(  1, -1 )  );}
+          65% { @include transform( translate3D(176px, 140px, 0) scale( -1, -1 )  );}
+          70% { @include transform( translate3D(0px  , 240px, 0) scale( -1,  1 )  );}
+          75% { @include transform( translate3D(25px , 30px,  0) scale(  1,  1 )  );}
+          80% { @include transform( translate3D(300px, 220px, 0) scale( -1, -1 )  );}
+          85% { @include transform( translate3D(90px , 260px, 0) scale(  1, -1 )  );}
+          90% { @include transform( translate3D(124px, 160px, 0) scale( -1,  1 )  );}
+          95% { @include transform( translate3D(230px, 40px,  0) scale( -1, -1 )  );}
+          100%{ @include transform( translate3D(132px, 120px, 0) scale(  1,  1 )  );}
+          
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

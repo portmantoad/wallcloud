@@ -1,0 +1,84 @@
+.frame-group{
+	@include fill;
+	margin:0; padding:0;
+
+	li{ 
+		margin:0; padding:0;
+		background-size:cover;
+		background-position:center;
+	    @include fill;
+	    display: none;
+	    // visibility:hidden;
+	    overflow: hidden;
+			@include transition(opacity $transition-speed, transform $transition-speed ease-out);
+			&.veryslow{ @include transition-duration($transition-speed * 2.5, $transition-speed); }
+			&.slow{ @include transition-duration($transition-speed * 2, $transition-speed); }
+			&.fast{ @include transition-duration($transition-speed / 2, $transition-speed); }
+
+		.no-slide &{
+			@include transition-property(opacity);
+		}
+		.no-transition &{
+			@include transition(none);
+		}
+
+		&.fade{ opacity:0; display: block;}
+		// &[class~="slide"]{ 
+			// @include backface-visibility(hidden); 
+			// @include transform-style(preserve-3d);
+			// @include perspective(1000);
+		// }
+	}
+}
+
+.p-haslayout{
+	display: block !important;
+	visibility: hidden;
+}
+
+%p-before{
+	&.slideH, &.slideHIn{ @include transform(translate(100%, 0)); display: block;}
+	&.slideV, &.slideVIn{ @include transform(translate(0, 100%)); display: block;} 
+	&.fadeIn{ opacity:0; display: block;}
+}
+
+%p-after{
+	&.slideH, &.slideHOut{ @include transform(translate(-100%, 0)); display: block;}
+	&.slideV, &.slideVOut{ @include transform(translate(0, -100%)); display: block;} 
+	&.fadeOut{ opacity:0; display: block;}
+}
+
+%p-visible{
+	visibility: visible;
+	display: block;
+	@include transform(translate(0, 0));
+	opacity: 1 !important;
+}
+
+
+@for $i from 1 through 18{
+
+	.page-#{$i} {
+
+		.p-#{$i}-before{
+			@extend %p-before;
+		}
+
+		.p-#{$i}, 
+		.p-#{$i}-after .p-#{$i}-after, 
+		.p-#{$i}-before .p-#{$i}-before{
+			@extend %p-visible;
+		}
+
+		.p-#{$i}-after{
+			@extend %p-after;
+		}
+
+		[class~="p-#{$i}"]{
+			@extend %p-ready;
+		}
+
+	}
+	
+}
+

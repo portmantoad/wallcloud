@@ -1,0 +1,116 @@
+       .frame{
+        visibility: hidden;
+        &.show{ visibility: visible; }
+        }
+
+       @include breakpoint(medium){
+
+         .frame{
+              visibility: visible;
+              @include animation-fill-mode(forwards);
+              @include animation-duration(1000ms);
+              @include animation-name(fadeOut);
+              @include animation-timing-function(cubic-bezier(0, .3913, .56, 1));
+               &.show{ @include animation-timing-function(cubic-bezier(0, .56, .3913, 1));
+                @include animation-name(fadeIn);}
+
+                .fast, .fast &{@include animation-duration(500ms);}
+                .slow, .slow &{@include animation-duration(1500ms);}
+          }
+
+          .frame.slide-horizontal, .slide-horizontal > .frame{
+
+            @include animation-timing-function(ease-in-out);
+            &.show{ @include animation-timing-function(ease-in-out);}
+
+              &.backward{ @include animation-name(slideOutLeft); 
+                  &.show{ @include animation-name(slideInLeft); } }
+              &.forward{ @include animation-name(slideOutRight); 
+                  &.show{ @include animation-name(slideInRight); } }
+          }
+
+          .frame.slide-vertical, .slide-vertical > .frame{
+
+            @include animation-timing-function(ease-in-out);
+            &.show{ @include animation-timing-function(ease-in-out);}
+            
+              &.backward{ @include animation-name(slideOutUp); 
+                  &.show{ @include animation-name(slideInUp); } }
+              &.forward{ @include animation-name(slideOutDown);                 
+                  &.show{ @include animation-name(slideInDown); } }
+          }
+
+          .frame.fade.backward, .frame.fade.forward, 
+          .slide-horizontal.fade > .frame.fade.forward, 
+          .slide-vertical.fade > .frame.fade.forward{
+              @include animation-name(fadeOut);
+              @include animation-timing-function(cubic-bezier(0, .3913, .56, 1));
+               &.show{ @include animation-timing-function(cubic-bezier(0, .56, .3913, 1));
+                @include animation-name(fadeIn);}
+          }
+
+
+          .frame.slide-horizontal.fade, .slide-horizontal.fade > .frame{
+
+              @include animation-timing-function(ease-in-out, cubic-bezier(0, .3913, .56, 1));
+               &.show{ @include animation-timing-function(ease-in-out);}
+            
+                &.backward{ @include animation-name(slideOutLeft, fadeOut); 
+                    &.show{ @include animation-name(slideInLeft); } }
+                &.forward{ @include animation-name(slideOutRight, fadeOut); 
+                    &.show{ @include animation-name(slideInRight); } }
+          }
+
+          .frame.slide-vertical.fade, .slide-vertical.fade > .frame{
+
+                @include animation-timing-function(ease-in-out, cubic-bezier(0, .3913, .56, 1));
+               &.show{ @include animation-timing-function(ease-in-out);}
+            
+                &.backward{ @include animation-name(slideOutUp, fadeOut); 
+                    &.show{ @include animation-name(slideInUp); } }
+                &.forward{ @include animation-name(slideOutDown, fadeOut); 
+                    &.show{ @include animation-name(slideInDown); } }
+          }
+
+        }
+
+
+        @include keyframes(fadeIn) {
+          0% { opacity: 0; } 
+        }
+
+        @include keyframes(fadeOut) {
+          100% {  opacity: 0; }  
+        }
+
+        @include keyframes(slideInLeft) {
+          0% { @include transform(translate3D(-100%, 0, 0)); }
+        }
+
+        @include keyframes(slideOutLeft) {
+          100% {  @include transform(translate3D(100%, 0, 0)); } 
+        }
+
+        @include keyframes(slideInRight) {
+          0% { @include transform(translate3D(100%, 0, 0)); }
+        }
+
+        @include keyframes(slideOutRight) {
+          100% {  @include transform(translate3D(-100%, 0, 0)); } 
+        }
+
+        @include keyframes(slideInUp) {
+          0% { @include transform(translate3D(0, -100%, 0)); }
+        }
+
+        @include keyframes(slideOutUp) {
+          100% {  @include transform(translate3D(0, 100%, 0)); } 
+        }
+
+        @include keyframes(slideInDown) {
+          0% { @include transform(translate3D(0, 100%, 0)); }
+        }
+
+        @include keyframes(slideOutDown) {
+          100% {  @include transform(translate3D(0, -100%, 0)); } 
+        }

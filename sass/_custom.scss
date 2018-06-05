@@ -1,0 +1,107 @@
+body{background-color: rgb(8,0,57);}
+
+.stroked{
+    display: inline-block;
+    position: relative;
+    // z-index: 5;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0,0,0, 0.1);
+    background-color: rgb(8,0,57);
+      font-size: 1em;
+      line-height: 2.5em;
+      min-height: 2.5em;
+
+    // opacity: 0;
+    // @include transition(opacity 500ms linear);
+    // &.loaded{opacity:.99;}
+
+    canvas{
+      position:absolute; 
+      // z-index:-1;
+    } 
+    span{position:relative; top:-1px; }
+}
+
+.ready .stroked span{top: initial;}
+
+.spaced{margin-top: 0;}
+
+.textBlock{position: absolute; 
+  display: block;
+  &.ready{
+    @include transform-origin(50%, 50%);
+    @include transform(scale(0.8));
+    @include breakpoint(small){
+      @include transform(scale(1));
+    }
+    // //   @include breakpoint(medium){
+    // //   @include transform(scale(1.2));
+    // // }
+    // @include breakpoint(large){
+    //   @include transform(scale(1.2));
+    // }
+  }
+}
+
+.pre{white-space:pre;}
+
+.hurricane.stroked, .hurricane .stroked{
+  color: rgb(8,0,57);
+  background-color: #fff;
+  text-shadow: 1px 1px 0px rgba(255,255,255, 0.1);
+}
+
+
+//----------------------------------
+
+.silohuette{
+  background-image:url('../assets/meredith_silohuette.png');
+  background-color:rgba(40,30,70,.6);
+}
+
+.sidewalk{
+  background-image:url('../assets/meredith_sidewalk-bw.png');
+}
+
+//----------------------------------
+
+.weirdtexture{
+  @include transition(opacity 5s ease-in 1000ms);
+  background-image:url('../assets/texture-optim.png');
+  background-size:cover; background-position:center;
+  opacity:0;
+}
+
+.page-7 .weirdtexture{ opacity:1;}
+
+//----------------------------------
+
+.gate{          
+  background-image:url('../assets/meredith_gate.png');
+  background-position: 80% 0% !important;
+}
+
+
+.water{                  
+  background-image:url('../assets/meredith_gate-water.jpg');
+  background-position: 80% 0% !important 
+}
+
+//----------------------------------
+
+.auto{                  
+  background-image:url('../assets/auto-color.jpg');
+}
+
+//----------------------------------
+
+.credits{
+  margin-top: $bottombar-height/-2;
+  width:432px;
+  height:600px;
+  max-width: 85%;
+  max-height: 85%;
+  background: url('../assets/credits.png') no-repeat center;
+  background-size: contain;
+
+}

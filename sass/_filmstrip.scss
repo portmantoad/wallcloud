@@ -1,0 +1,50 @@
+// .filter {visibility: hidden;}
+.filmstrip{display: none;}
+.framewrap{ 
+    background: transparent;  //ff mobile fix
+    
+    overflow: hidden !important;
+    position: relative;
+    .filter{position: absolute; display: none;}
+    img, canvas{
+        opacity: .99;  //ff mobile fix
+        display:block;
+        position: absolute;
+        top:0; left:0;
+        width:100% !important;
+        height:auto !important;
+        // @include backface-visibility(hidden); 
+        // @include transform-style(preserve-3d);
+        // @include perspective(1000);
+
+        @include animation-fill-mode(both);
+        @include animation-iteration-count(infinite);
+        @include animation-play-state(paused);
+    }
+
+    &.paused{
+        img, canvas{
+            @include animation-play-state(paused !important);
+        }
+    }
+}
+
+
+%p-visible > .framewrap *, %p-visible > .focalpoint .framewrap *{ @include animation-play-state(running);}
+// .current > .framewrap *, .current > .focalpoint .framewrap *{ @include animation-play-state(running);}
+
+@include keyframes(filmstrip-2)  { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -50%)); }}
+@include keyframes(filmstrip-3)  { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -66.6666666666%)); }}
+@include keyframes(filmstrip-4)  { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -75%)); }}
+@include keyframes(filmstrip-5)  { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -80%)); }}
+@include keyframes(filmstrip-6)  { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -83.3333333333%)); }}
+@include keyframes(filmstrip-7)  { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -85.7142857143%)); }}
+@include keyframes(filmstrip-8)  { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -87.5%)); }}
+@include keyframes(filmstrip-9)  { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -88.8888888889%)); }}
+@include keyframes(filmstrip-10) { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -90%)); }}
+@include keyframes(filmstrip-11) { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -90.9090909091%)); }}
+@include keyframes(filmstrip-12) { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -91.6666666667%)); }}
+@include keyframes(filmstrip-13) { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -92.3076923077%)); }}
+@include keyframes(filmstrip-14) { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -92.8571428571%)); }}
+@include keyframes(filmstrip-15) { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -93.3333333333%)); }}
+@include keyframes(filmstrip-16) { from{ @include transform(translate(0, 0%)); } to{ @include transform(translate(0, -93.75%)); }}

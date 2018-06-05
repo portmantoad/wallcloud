@@ -1,0 +1,2558 @@
+@charset "UTF-8";
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+/* line 22, ../sass/_normalize.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, ../sass/_normalize.scss */
+audio, canvas, video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, ../sass/_normalize.scss */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, ../sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 74, ../sass/_normalize.scss */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, ../sass/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 95, ../sass/_normalize.scss */
+a:active, a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 108, ../sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 117, ../sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 126, ../sass/_normalize.scss */
+b, strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 134, ../sass/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 142, ../sass/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 152, ../sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 164, ../sass/_normalize.scss */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 173, ../sass/_normalize.scss */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+/* line 181, ../sass/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 189, ../sass/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 198, ../sass/_normalize.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 205, ../sass/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 209, ../sass/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 221, ../sass/_normalize.scss */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 229, ../sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 241, ../sass/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 253, ../sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 264, ../sass/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 278, ../sass/_normalize.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 290, ../sass/_normalize.scss */
+button, input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 302, ../sass/_normalize.scss */
+button, select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 317, ../sass/_normalize.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 327, ../sass/_normalize.scss */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 337, ../sass/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 348, ../sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 361, ../sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 370, ../sass/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 380, ../sass/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 393, ../sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 21, ../sass/_mixins.scss */
+.fill {
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 97, ../sass/_type.scss */
+p.lead {
+  font-size: 1.2em;
+  line-height: 1.6; }
+
+/* line 102, ../sass/_type.scss */
+.subheader {
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: 300;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em; }
+
+/* Typography resets */
+/* line 129, ../sass/_type.scss */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+/* Default Link Styles */
+/* line 135, ../sass/_type.scss */
+a {
+  color: #777777;
+  text-decoration: none;
+  line-height: inherit; }
+/* line 141, ../sass/_type.scss */
+a:hover, a:focus {
+  color: #6a6a6a; }
+/* line 143, ../sass/_type.scss */
+a img {
+  border: none; }
+
+/* Default paragraph styles */
+/* line 147, ../sass/_type.scss */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-rendering: optimizeLegibility; }
+/* line 157, ../sass/_type.scss */
+p aside {
+  font-size: 14px;
+  line-height: 1.35;
+  font-style: italic; }
+
+/* Default header styles */
+/* line 165, ../sass/_type.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", Helvetica, arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: -1.6px; }
+/* line 175, ../sass/_type.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 60%;
+  color: #6f6f6f;
+  line-height: 0; }
+
+/* line 182, ../sass/_type.scss */
+h1 {
+  font-size: 34px; }
+
+/* line 183, ../sass/_type.scss */
+h2 {
+  font-size: 27px; }
+
+/* line 184, ../sass/_type.scss */
+h3 {
+  font-size: 22px; }
+
+/* line 185, ../sass/_type.scss */
+h4 {
+  font-size: 18px; }
+
+/* line 186, ../sass/_type.scss */
+h5 {
+  font-size: 18px; }
+
+/* line 187, ../sass/_type.scss */
+h6 {
+  font-size: 1em; }
+
+/* line 191, ../sass/_type.scss */
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 20px 0 19px;
+  height: 0; }
+
+/* Helpful Typography Defaults */
+/* line 201, ../sass/_type.scss */
+em, i {
+  font-style: italic;
+  line-height: inherit; }
+
+/* line 207, ../sass/_type.scss */
+strong, b {
+  font-weight: bold;
+  line-height: inherit; }
+
+/* line 212, ../sass/_type.scss */
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+/* Lists */
+/* line 220, ../sass/_type.scss */
+ul, ol, dl {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  list-style-position: outside;
+  font-family: inherit; }
+
+/* Unordered Lists */
+/* line 232, ../sass/_type.scss */
+ul li ul, ul li ol {
+  margin-left: 20px;
+  margin-bottom: 0;
+  font-size: 1em;
+  /* Override nested font-size change */ }
+/* line 241, ../sass/_type.scss */
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit; }
+/* line 244, ../sass/_type.scss */
+ul.square {
+  list-style-type: square; }
+/* line 245, ../sass/_type.scss */
+ul.circle {
+  list-style-type: circle; }
+/* line 246, ../sass/_type.scss */
+ul.disc {
+  list-style-type: disc; }
+/* line 247, ../sass/_type.scss */
+ul.no-bullet {
+  list-style: none; }
+
+/* Ordered Lists */
+/* line 254, ../sass/_type.scss */
+ol li ul, ol li ol {
+  margin-left: 20px;
+  margin-bottom: 0; }
+
+/* Definition Lists */
+/* line 263, ../sass/_type.scss */
+dl dt {
+  margin-bottom: 0.3em;
+  font-weight: bold; }
+/* line 267, ../sass/_type.scss */
+dl dd {
+  margin-bottom: 12px; }
+
+/* Abbreviations */
+/* line 272, ../sass/_type.scss */
+abbr, acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222222;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help; }
+
+/* line 279, ../sass/_type.scss */
+abbr {
+  text-transform: none; }
+
+/* Blockquotes */
+/* line 284, ../sass/_type.scss */
+blockquote {
+  margin: 0 0 20px;
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid #dddddd; }
+/* line 289, ../sass/_type.scss */
+blockquote cite {
+  display: block;
+  font-size: 13px;
+  color: #555555; }
+/* line 293, ../sass/_type.scss */
+blockquote cite:before {
+  content: "\2014 \0020"; }
+/* line 298, ../sass/_type.scss */
+blockquote cite a, blockquote cite a:visited {
+  color: #555555; }
+
+/* line 304, ../sass/_type.scss */
+blockquote, blockquote p {
+  line-height: 1.6;
+  color: #6f6f6f; }
+
+/* Microformats */
+/* line 310, ../sass/_type.scss */
+.vcard {
+  display: inline-block;
+  margin: 0 0 20px 0;
+  border: 1px solid #dddddd;
+  padding: 10px 12px; }
+/* line 316, ../sass/_type.scss */
+.vcard li {
+  margin: 0;
+  display: block; }
+/* line 320, ../sass/_type.scss */
+.vcard .fn {
+  font-weight: bold;
+  font-size: 15px; }
+
+/* line 327, ../sass/_type.scss */
+.vevent .summary {
+  font-weight: bold; }
+/* line 329, ../sass/_type.scss */
+.vevent abbr {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  padding: 0 1px; }
+
+@media only screen and (min-width: 768px) {
+  /* line 340, ../sass/_type.scss */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4; }
+
+  /* line 341, ../sass/_type.scss */
+  h1 {
+    font-size: 44px; }
+
+  /* line 342, ../sass/_type.scss */
+  h2 {
+    font-size: 37px; }
+
+  /* line 343, ../sass/_type.scss */
+  h3 {
+    font-size: 27px; }
+
+  /* line 344, ../sass/_type.scss */
+  h4 {
+    font-size: 23px; } }
+/* line 1, ../sass/_frames.scss */
+.frame-group {
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+/* line 5, ../sass/_frames.scss */
+.frame-group li {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  overflow: hidden;
+  -webkit-transition: opacity 800ms, -webkit-transform 800ms ease-out;
+  -moz-transition: opacity 800ms, -moz-transform 800ms ease-out;
+  -o-transition: opacity 800ms, -o-transform 800ms ease-out;
+  transition: opacity 800ms, transform 800ms ease-out; }
+/* line 14, ../sass/_frames.scss */
+.frame-group li.veryslow {
+  -webkit-transition-duration: 2000ms, 800ms;
+  -moz-transition-duration: 2000ms, 800ms;
+  -o-transition-duration: 2000ms, 800ms;
+  transition-duration: 2000ms, 800ms; }
+/* line 15, ../sass/_frames.scss */
+.frame-group li.slow {
+  -webkit-transition-duration: 1600ms, 800ms;
+  -moz-transition-duration: 1600ms, 800ms;
+  -o-transition-duration: 1600ms, 800ms;
+  transition-duration: 1600ms, 800ms; }
+/* line 16, ../sass/_frames.scss */
+.frame-group li.fast {
+  -webkit-transition-duration: 400ms, 800ms;
+  -moz-transition-duration: 400ms, 800ms;
+  -o-transition-duration: 400ms, 800ms;
+  transition-duration: 400ms, 800ms; }
+/* line 18, ../sass/_frames.scss */
+.no-slide .frame-group li {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity; }
+/* line 21, ../sass/_frames.scss */
+.no-transition .frame-group li {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none; }
+/* line 25, ../sass/_frames.scss */
+.frame-group li.fade {
+  opacity: 0;
+  display: block; }
+
+/* line 34, ../sass/_frames.scss */
+.p-haslayout {
+  display: block !important;
+  visibility: hidden; }
+
+/* line 40, ../sass/_frames.scss */
+.page-1 .slideH.p-1-before, .page-2 .slideH.p-2-before, .page-3 .slideH.p-3-before, .page-4 .slideH.p-4-before, .page-5 .slideH.p-5-before, .page-6 .slideH.p-6-before, .page-7 .slideH.p-7-before, .page-8 .slideH.p-8-before, .page-9 .slideH.p-9-before, .page-10 .slideH.p-10-before, .page-11 .slideH.p-11-before, .page-12 .slideH.p-12-before, .page-13 .slideH.p-13-before, .page-14 .slideH.p-14-before, .page-15 .slideH.p-15-before, .page-16 .slideH.p-16-before, .page-17 .slideH.p-17-before, .page-18 .slideH.p-18-before, .page-1 .slideHIn.p-1-before, .page-2 .slideHIn.p-2-before, .page-3 .slideHIn.p-3-before, .page-4 .slideHIn.p-4-before, .page-5 .slideHIn.p-5-before, .page-6 .slideHIn.p-6-before, .page-7 .slideHIn.p-7-before, .page-8 .slideHIn.p-8-before, .page-9 .slideHIn.p-9-before, .page-10 .slideHIn.p-10-before, .page-11 .slideHIn.p-11-before, .page-12 .slideHIn.p-12-before, .page-13 .slideHIn.p-13-before, .page-14 .slideHIn.p-14-before, .page-15 .slideHIn.p-15-before, .page-16 .slideHIn.p-16-before, .page-17 .slideHIn.p-17-before, .page-18 .slideHIn.p-18-before {
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  display: block; }
+/* line 41, ../sass/_frames.scss */
+.page-1 .slideV.p-1-before, .page-2 .slideV.p-2-before, .page-3 .slideV.p-3-before, .page-4 .slideV.p-4-before, .page-5 .slideV.p-5-before, .page-6 .slideV.p-6-before, .page-7 .slideV.p-7-before, .page-8 .slideV.p-8-before, .page-9 .slideV.p-9-before, .page-10 .slideV.p-10-before, .page-11 .slideV.p-11-before, .page-12 .slideV.p-12-before, .page-13 .slideV.p-13-before, .page-14 .slideV.p-14-before, .page-15 .slideV.p-15-before, .page-16 .slideV.p-16-before, .page-17 .slideV.p-17-before, .page-18 .slideV.p-18-before, .page-1 .slideVIn.p-1-before, .page-2 .slideVIn.p-2-before, .page-3 .slideVIn.p-3-before, .page-4 .slideVIn.p-4-before, .page-5 .slideVIn.p-5-before, .page-6 .slideVIn.p-6-before, .page-7 .slideVIn.p-7-before, .page-8 .slideVIn.p-8-before, .page-9 .slideVIn.p-9-before, .page-10 .slideVIn.p-10-before, .page-11 .slideVIn.p-11-before, .page-12 .slideVIn.p-12-before, .page-13 .slideVIn.p-13-before, .page-14 .slideVIn.p-14-before, .page-15 .slideVIn.p-15-before, .page-16 .slideVIn.p-16-before, .page-17 .slideVIn.p-17-before, .page-18 .slideVIn.p-18-before {
+  -webkit-transform: translate(0, 100%);
+  -moz-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  display: block; }
+/* line 42, ../sass/_frames.scss */
+.page-1 .fadeIn.p-1-before, .page-2 .fadeIn.p-2-before, .page-3 .fadeIn.p-3-before, .page-4 .fadeIn.p-4-before, .page-5 .fadeIn.p-5-before, .page-6 .fadeIn.p-6-before, .page-7 .fadeIn.p-7-before, .page-8 .fadeIn.p-8-before, .page-9 .fadeIn.p-9-before, .page-10 .fadeIn.p-10-before, .page-11 .fadeIn.p-11-before, .page-12 .fadeIn.p-12-before, .page-13 .fadeIn.p-13-before, .page-14 .fadeIn.p-14-before, .page-15 .fadeIn.p-15-before, .page-16 .fadeIn.p-16-before, .page-17 .fadeIn.p-17-before, .page-18 .fadeIn.p-18-before {
+  opacity: 0;
+  display: block; }
+
+/* line 46, ../sass/_frames.scss */
+.page-1 .slideH.p-1-after, .page-2 .slideH.p-2-after, .page-3 .slideH.p-3-after, .page-4 .slideH.p-4-after, .page-5 .slideH.p-5-after, .page-6 .slideH.p-6-after, .page-7 .slideH.p-7-after, .page-8 .slideH.p-8-after, .page-9 .slideH.p-9-after, .page-10 .slideH.p-10-after, .page-11 .slideH.p-11-after, .page-12 .slideH.p-12-after, .page-13 .slideH.p-13-after, .page-14 .slideH.p-14-after, .page-15 .slideH.p-15-after, .page-16 .slideH.p-16-after, .page-17 .slideH.p-17-after, .page-18 .slideH.p-18-after, .page-1 .slideHOut.p-1-after, .page-2 .slideHOut.p-2-after, .page-3 .slideHOut.p-3-after, .page-4 .slideHOut.p-4-after, .page-5 .slideHOut.p-5-after, .page-6 .slideHOut.p-6-after, .page-7 .slideHOut.p-7-after, .page-8 .slideHOut.p-8-after, .page-9 .slideHOut.p-9-after, .page-10 .slideHOut.p-10-after, .page-11 .slideHOut.p-11-after, .page-12 .slideHOut.p-12-after, .page-13 .slideHOut.p-13-after, .page-14 .slideHOut.p-14-after, .page-15 .slideHOut.p-15-after, .page-16 .slideHOut.p-16-after, .page-17 .slideHOut.p-17-after, .page-18 .slideHOut.p-18-after {
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  display: block; }
+/* line 47, ../sass/_frames.scss */
+.page-1 .slideV.p-1-after, .page-2 .slideV.p-2-after, .page-3 .slideV.p-3-after, .page-4 .slideV.p-4-after, .page-5 .slideV.p-5-after, .page-6 .slideV.p-6-after, .page-7 .slideV.p-7-after, .page-8 .slideV.p-8-after, .page-9 .slideV.p-9-after, .page-10 .slideV.p-10-after, .page-11 .slideV.p-11-after, .page-12 .slideV.p-12-after, .page-13 .slideV.p-13-after, .page-14 .slideV.p-14-after, .page-15 .slideV.p-15-after, .page-16 .slideV.p-16-after, .page-17 .slideV.p-17-after, .page-18 .slideV.p-18-after, .page-1 .slideVOut.p-1-after, .page-2 .slideVOut.p-2-after, .page-3 .slideVOut.p-3-after, .page-4 .slideVOut.p-4-after, .page-5 .slideVOut.p-5-after, .page-6 .slideVOut.p-6-after, .page-7 .slideVOut.p-7-after, .page-8 .slideVOut.p-8-after, .page-9 .slideVOut.p-9-after, .page-10 .slideVOut.p-10-after, .page-11 .slideVOut.p-11-after, .page-12 .slideVOut.p-12-after, .page-13 .slideVOut.p-13-after, .page-14 .slideVOut.p-14-after, .page-15 .slideVOut.p-15-after, .page-16 .slideVOut.p-16-after, .page-17 .slideVOut.p-17-after, .page-18 .slideVOut.p-18-after {
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  display: block; }
+/* line 48, ../sass/_frames.scss */
+.page-1 .fadeOut.p-1-after, .page-2 .fadeOut.p-2-after, .page-3 .fadeOut.p-3-after, .page-4 .fadeOut.p-4-after, .page-5 .fadeOut.p-5-after, .page-6 .fadeOut.p-6-after, .page-7 .fadeOut.p-7-after, .page-8 .fadeOut.p-8-after, .page-9 .fadeOut.p-9-after, .page-10 .fadeOut.p-10-after, .page-11 .fadeOut.p-11-after, .page-12 .fadeOut.p-12-after, .page-13 .fadeOut.p-13-after, .page-14 .fadeOut.p-14-after, .page-15 .fadeOut.p-15-after, .page-16 .fadeOut.p-16-after, .page-17 .fadeOut.p-17-after, .page-18 .fadeOut.p-18-after {
+  opacity: 0;
+  display: block; }
+
+/* line 51, ../sass/_frames.scss */
+.page-1 .p-1, .page-1 .p-1-after .p-1-after, .page-1 .p-1-before .p-1-before, .page-2 .p-2, .page-2 .p-2-after .p-2-after, .page-2 .p-2-before .p-2-before, .page-3 .p-3, .page-3 .p-3-after .p-3-after, .page-3 .p-3-before .p-3-before, .page-4 .p-4, .page-4 .p-4-after .p-4-after, .page-4 .p-4-before .p-4-before, .page-5 .p-5, .page-5 .p-5-after .p-5-after, .page-5 .p-5-before .p-5-before, .page-6 .p-6, .page-6 .p-6-after .p-6-after, .page-6 .p-6-before .p-6-before, .page-7 .p-7, .page-7 .p-7-after .p-7-after, .page-7 .p-7-before .p-7-before, .page-8 .p-8, .page-8 .p-8-after .p-8-after, .page-8 .p-8-before .p-8-before, .page-9 .p-9, .page-9 .p-9-after .p-9-after, .page-9 .p-9-before .p-9-before, .page-10 .p-10, .page-10 .p-10-after .p-10-after, .page-10 .p-10-before .p-10-before, .page-11 .p-11, .page-11 .p-11-after .p-11-after, .page-11 .p-11-before .p-11-before, .page-12 .p-12, .page-12 .p-12-after .p-12-after, .page-12 .p-12-before .p-12-before, .page-13 .p-13, .page-13 .p-13-after .p-13-after, .page-13 .p-13-before .p-13-before, .page-14 .p-14, .page-14 .p-14-after .p-14-after, .page-14 .p-14-before .p-14-before, .page-15 .p-15, .page-15 .p-15-after .p-15-after, .page-15 .p-15-before .p-15-before, .page-16 .p-16, .page-16 .p-16-after .p-16-after, .page-16 .p-16-before .p-16-before, .page-17 .p-17, .page-17 .p-17-after .p-17-after, .page-17 .p-17-before .p-17-before, .page-18 .p-18, .page-18 .p-18-after .p-18-after, .page-18 .p-18-before .p-18-before {
+  visibility: visible;
+  display: block;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1 !important; }
+
+/* line 2, ../sass/_filmstrip.scss */
+.filmstrip {
+  display: none; }
+
+/* line 3, ../sass/_filmstrip.scss */
+.framewrap {
+  background: transparent;
+  overflow: hidden !important;
+  position: relative; }
+/* line 8, ../sass/_filmstrip.scss */
+.framewrap .filter {
+  position: absolute;
+  display: none; }
+/* line 9, ../sass/_filmstrip.scss */
+.framewrap img, .framewrap canvas {
+  opacity: .99;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: auto !important;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused; }
+/* line 26, ../sass/_filmstrip.scss */
+.framewrap.paused img, .framewrap.paused canvas {
+  -webkit-animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+  -ms-animation-play-state: paused !important;
+  -o-animation-play-state: paused !important;
+  animation-play-state: paused !important; }
+
+/* line 33, ../sass/_filmstrip.scss */
+.page-1 .p-1 > .framewrap *, .page-1 .p-1-after .p-1-after > .framewrap *, .page-1 .p-1-before .p-1-before > .framewrap *, .page-2 .p-2 > .framewrap *, .page-2 .p-2-after .p-2-after > .framewrap *, .page-2 .p-2-before .p-2-before > .framewrap *, .page-3 .p-3 > .framewrap *, .page-3 .p-3-after .p-3-after > .framewrap *, .page-3 .p-3-before .p-3-before > .framewrap *, .page-4 .p-4 > .framewrap *, .page-4 .p-4-after .p-4-after > .framewrap *, .page-4 .p-4-before .p-4-before > .framewrap *, .page-5 .p-5 > .framewrap *, .page-5 .p-5-after .p-5-after > .framewrap *, .page-5 .p-5-before .p-5-before > .framewrap *, .page-6 .p-6 > .framewrap *, .page-6 .p-6-after .p-6-after > .framewrap *, .page-6 .p-6-before .p-6-before > .framewrap *, .page-7 .p-7 > .framewrap *, .page-7 .p-7-after .p-7-after > .framewrap *, .page-7 .p-7-before .p-7-before > .framewrap *, .page-8 .p-8 > .framewrap *, .page-8 .p-8-after .p-8-after > .framewrap *, .page-8 .p-8-before .p-8-before > .framewrap *, .page-9 .p-9 > .framewrap *, .page-9 .p-9-after .p-9-after > .framewrap *, .page-9 .p-9-before .p-9-before > .framewrap *, .page-10 .p-10 > .framewrap *, .page-10 .p-10-after .p-10-after > .framewrap *, .page-10 .p-10-before .p-10-before > .framewrap *, .page-11 .p-11 > .framewrap *, .page-11 .p-11-after .p-11-after > .framewrap *, .page-11 .p-11-before .p-11-before > .framewrap *, .page-12 .p-12 > .framewrap *, .page-12 .p-12-after .p-12-after > .framewrap *, .page-12 .p-12-before .p-12-before > .framewrap *, .page-13 .p-13 > .framewrap *, .page-13 .p-13-after .p-13-after > .framewrap *, .page-13 .p-13-before .p-13-before > .framewrap *, .page-14 .p-14 > .framewrap *, .page-14 .p-14-after .p-14-after > .framewrap *, .page-14 .p-14-before .p-14-before > .framewrap *, .page-15 .p-15 > .framewrap *, .page-15 .p-15-after .p-15-after > .framewrap *, .page-15 .p-15-before .p-15-before > .framewrap *, .page-16 .p-16 > .framewrap *, .page-16 .p-16-after .p-16-after > .framewrap *, .page-16 .p-16-before .p-16-before > .framewrap *, .page-17 .p-17 > .framewrap *, .page-17 .p-17-after .p-17-after > .framewrap *, .page-17 .p-17-before .p-17-before > .framewrap *, .page-18 .p-18 > .framewrap *, .page-18 .p-18-after .p-18-after > .framewrap *, .page-18 .p-18-before .p-18-before > .framewrap *, .page-1 .p-1 > .focalpoint .framewrap *, .page-1 .p-1-after .p-1-after > .focalpoint .framewrap *, .page-1 .p-1-before .p-1-before > .focalpoint .framewrap *, .page-2 .p-2 > .focalpoint .framewrap *, .page-2 .p-2-after .p-2-after > .focalpoint .framewrap *, .page-2 .p-2-before .p-2-before > .focalpoint .framewrap *, .page-3 .p-3 > .focalpoint .framewrap *, .page-3 .p-3-after .p-3-after > .focalpoint .framewrap *, .page-3 .p-3-before .p-3-before > .focalpoint .framewrap *, .page-4 .p-4 > .focalpoint .framewrap *, .page-4 .p-4-after .p-4-after > .focalpoint .framewrap *, .page-4 .p-4-before .p-4-before > .focalpoint .framewrap *, .page-5 .p-5 > .focalpoint .framewrap *, .page-5 .p-5-after .p-5-after > .focalpoint .framewrap *, .page-5 .p-5-before .p-5-before > .focalpoint .framewrap *, .page-6 .p-6 > .focalpoint .framewrap *, .page-6 .p-6-after .p-6-after > .focalpoint .framewrap *, .page-6 .p-6-before .p-6-before > .focalpoint .framewrap *, .page-7 .p-7 > .focalpoint .framewrap *, .page-7 .p-7-after .p-7-after > .focalpoint .framewrap *, .page-7 .p-7-before .p-7-before > .focalpoint .framewrap *, .page-8 .p-8 > .focalpoint .framewrap *, .page-8 .p-8-after .p-8-after > .focalpoint .framewrap *, .page-8 .p-8-before .p-8-before > .focalpoint .framewrap *, .page-9 .p-9 > .focalpoint .framewrap *, .page-9 .p-9-after .p-9-after > .focalpoint .framewrap *, .page-9 .p-9-before .p-9-before > .focalpoint .framewrap *, .page-10 .p-10 > .focalpoint .framewrap *, .page-10 .p-10-after .p-10-after > .focalpoint .framewrap *, .page-10 .p-10-before .p-10-before > .focalpoint .framewrap *, .page-11 .p-11 > .focalpoint .framewrap *, .page-11 .p-11-after .p-11-after > .focalpoint .framewrap *, .page-11 .p-11-before .p-11-before > .focalpoint .framewrap *, .page-12 .p-12 > .focalpoint .framewrap *, .page-12 .p-12-after .p-12-after > .focalpoint .framewrap *, .page-12 .p-12-before .p-12-before > .focalpoint .framewrap *, .page-13 .p-13 > .focalpoint .framewrap *, .page-13 .p-13-after .p-13-after > .focalpoint .framewrap *, .page-13 .p-13-before .p-13-before > .focalpoint .framewrap *, .page-14 .p-14 > .focalpoint .framewrap *, .page-14 .p-14-after .p-14-after > .focalpoint .framewrap *, .page-14 .p-14-before .p-14-before > .focalpoint .framewrap *, .page-15 .p-15 > .focalpoint .framewrap *, .page-15 .p-15-after .p-15-after > .focalpoint .framewrap *, .page-15 .p-15-before .p-15-before > .focalpoint .framewrap *, .page-16 .p-16 > .focalpoint .framewrap *, .page-16 .p-16-after .p-16-after > .focalpoint .framewrap *, .page-16 .p-16-before .p-16-before > .focalpoint .framewrap *, .page-17 .p-17 > .focalpoint .framewrap *, .page-17 .p-17-after .p-17-after > .focalpoint .framewrap *, .page-17 .p-17-before .p-17-before > .focalpoint .framewrap *, .page-18 .p-18 > .focalpoint .framewrap *, .page-18 .p-18-after .p-18-after > .focalpoint .framewrap *, .page-18 .p-18-before .p-18-before > .focalpoint .framewrap * {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running; }
+
+@-moz-keyframes filmstrip-2 {
+  /* line 36, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 36, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -50%);
+    transform: translate(0, -50%); } }
+
+@-webkit-keyframes filmstrip-2 {
+  /* line 36, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 36, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%); } }
+
+@-o-keyframes filmstrip-2 {
+  /* line 36, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 36, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%); } }
+
+@-ms-keyframes filmstrip-2 {
+  /* line 36, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 36, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); } }
+
+@keyframes filmstrip-2 {
+  /* line 36, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 36, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -50%); } }
+
+@-moz-keyframes filmstrip-3 {
+  /* line 37, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 37, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -66.66667%);
+    transform: translate(0, -66.66667%); } }
+
+@-webkit-keyframes filmstrip-3 {
+  /* line 37, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 37, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -66.66667%);
+    transform: translate(0, -66.66667%); } }
+
+@-o-keyframes filmstrip-3 {
+  /* line 37, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 37, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -66.66667%);
+    transform: translate(0, -66.66667%); } }
+
+@-ms-keyframes filmstrip-3 {
+  /* line 37, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 37, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -66.66667%);
+    transform: translate(0, -66.66667%); } }
+
+@keyframes filmstrip-3 {
+  /* line 37, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 37, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -66.66667%); } }
+
+@-moz-keyframes filmstrip-4 {
+  /* line 38, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 38, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -75%);
+    transform: translate(0, -75%); } }
+
+@-webkit-keyframes filmstrip-4 {
+  /* line 38, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 38, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -75%);
+    transform: translate(0, -75%); } }
+
+@-o-keyframes filmstrip-4 {
+  /* line 38, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 38, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -75%);
+    transform: translate(0, -75%); } }
+
+@-ms-keyframes filmstrip-4 {
+  /* line 38, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 38, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -75%);
+    transform: translate(0, -75%); } }
+
+@keyframes filmstrip-4 {
+  /* line 38, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 38, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -75%); } }
+
+@-moz-keyframes filmstrip-5 {
+  /* line 39, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 39, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -80%);
+    transform: translate(0, -80%); } }
+
+@-webkit-keyframes filmstrip-5 {
+  /* line 39, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 39, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -80%);
+    transform: translate(0, -80%); } }
+
+@-o-keyframes filmstrip-5 {
+  /* line 39, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 39, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -80%);
+    transform: translate(0, -80%); } }
+
+@-ms-keyframes filmstrip-5 {
+  /* line 39, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 39, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -80%);
+    transform: translate(0, -80%); } }
+
+@keyframes filmstrip-5 {
+  /* line 39, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 39, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -80%); } }
+
+@-moz-keyframes filmstrip-6 {
+  /* line 40, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 40, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -83.33333%);
+    transform: translate(0, -83.33333%); } }
+
+@-webkit-keyframes filmstrip-6 {
+  /* line 40, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 40, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -83.33333%);
+    transform: translate(0, -83.33333%); } }
+
+@-o-keyframes filmstrip-6 {
+  /* line 40, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 40, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -83.33333%);
+    transform: translate(0, -83.33333%); } }
+
+@-ms-keyframes filmstrip-6 {
+  /* line 40, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 40, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -83.33333%);
+    transform: translate(0, -83.33333%); } }
+
+@keyframes filmstrip-6 {
+  /* line 40, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 40, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -83.33333%); } }
+
+@-moz-keyframes filmstrip-7 {
+  /* line 41, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 41, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -85.71429%);
+    transform: translate(0, -85.71429%); } }
+
+@-webkit-keyframes filmstrip-7 {
+  /* line 41, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 41, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -85.71429%);
+    transform: translate(0, -85.71429%); } }
+
+@-o-keyframes filmstrip-7 {
+  /* line 41, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 41, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -85.71429%);
+    transform: translate(0, -85.71429%); } }
+
+@-ms-keyframes filmstrip-7 {
+  /* line 41, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 41, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -85.71429%);
+    transform: translate(0, -85.71429%); } }
+
+@keyframes filmstrip-7 {
+  /* line 41, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 41, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -85.71429%); } }
+
+@-moz-keyframes filmstrip-8 {
+  /* line 42, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 42, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -87.5%);
+    transform: translate(0, -87.5%); } }
+
+@-webkit-keyframes filmstrip-8 {
+  /* line 42, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 42, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -87.5%);
+    transform: translate(0, -87.5%); } }
+
+@-o-keyframes filmstrip-8 {
+  /* line 42, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 42, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -87.5%);
+    transform: translate(0, -87.5%); } }
+
+@-ms-keyframes filmstrip-8 {
+  /* line 42, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 42, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -87.5%);
+    transform: translate(0, -87.5%); } }
+
+@keyframes filmstrip-8 {
+  /* line 42, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 42, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -87.5%); } }
+
+@-moz-keyframes filmstrip-9 {
+  /* line 43, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 43, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -88.88889%);
+    transform: translate(0, -88.88889%); } }
+
+@-webkit-keyframes filmstrip-9 {
+  /* line 43, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 43, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -88.88889%);
+    transform: translate(0, -88.88889%); } }
+
+@-o-keyframes filmstrip-9 {
+  /* line 43, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 43, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -88.88889%);
+    transform: translate(0, -88.88889%); } }
+
+@-ms-keyframes filmstrip-9 {
+  /* line 43, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 43, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -88.88889%);
+    transform: translate(0, -88.88889%); } }
+
+@keyframes filmstrip-9 {
+  /* line 43, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 43, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -88.88889%); } }
+
+@-moz-keyframes filmstrip-10 {
+  /* line 44, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 44, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -90%);
+    transform: translate(0, -90%); } }
+
+@-webkit-keyframes filmstrip-10 {
+  /* line 44, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 44, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -90%);
+    transform: translate(0, -90%); } }
+
+@-o-keyframes filmstrip-10 {
+  /* line 44, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 44, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -90%);
+    transform: translate(0, -90%); } }
+
+@-ms-keyframes filmstrip-10 {
+  /* line 44, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 44, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -90%);
+    transform: translate(0, -90%); } }
+
+@keyframes filmstrip-10 {
+  /* line 44, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 44, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -90%); } }
+
+@-moz-keyframes filmstrip-11 {
+  /* line 45, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 45, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -90.90909%);
+    transform: translate(0, -90.90909%); } }
+
+@-webkit-keyframes filmstrip-11 {
+  /* line 45, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 45, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -90.90909%);
+    transform: translate(0, -90.90909%); } }
+
+@-o-keyframes filmstrip-11 {
+  /* line 45, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 45, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -90.90909%);
+    transform: translate(0, -90.90909%); } }
+
+@-ms-keyframes filmstrip-11 {
+  /* line 45, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 45, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -90.90909%);
+    transform: translate(0, -90.90909%); } }
+
+@keyframes filmstrip-11 {
+  /* line 45, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 45, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -90.90909%); } }
+
+@-moz-keyframes filmstrip-12 {
+  /* line 46, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 46, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -91.66667%);
+    transform: translate(0, -91.66667%); } }
+
+@-webkit-keyframes filmstrip-12 {
+  /* line 46, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 46, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -91.66667%);
+    transform: translate(0, -91.66667%); } }
+
+@-o-keyframes filmstrip-12 {
+  /* line 46, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 46, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -91.66667%);
+    transform: translate(0, -91.66667%); } }
+
+@-ms-keyframes filmstrip-12 {
+  /* line 46, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 46, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -91.66667%);
+    transform: translate(0, -91.66667%); } }
+
+@keyframes filmstrip-12 {
+  /* line 46, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 46, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -91.66667%); } }
+
+@-moz-keyframes filmstrip-13 {
+  /* line 47, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 47, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -92.30769%);
+    transform: translate(0, -92.30769%); } }
+
+@-webkit-keyframes filmstrip-13 {
+  /* line 47, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 47, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -92.30769%);
+    transform: translate(0, -92.30769%); } }
+
+@-o-keyframes filmstrip-13 {
+  /* line 47, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 47, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -92.30769%);
+    transform: translate(0, -92.30769%); } }
+
+@-ms-keyframes filmstrip-13 {
+  /* line 47, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 47, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -92.30769%);
+    transform: translate(0, -92.30769%); } }
+
+@keyframes filmstrip-13 {
+  /* line 47, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 47, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -92.30769%); } }
+
+@-moz-keyframes filmstrip-14 {
+  /* line 48, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 48, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -92.85714%);
+    transform: translate(0, -92.85714%); } }
+
+@-webkit-keyframes filmstrip-14 {
+  /* line 48, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 48, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -92.85714%);
+    transform: translate(0, -92.85714%); } }
+
+@-o-keyframes filmstrip-14 {
+  /* line 48, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 48, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -92.85714%);
+    transform: translate(0, -92.85714%); } }
+
+@-ms-keyframes filmstrip-14 {
+  /* line 48, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 48, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -92.85714%);
+    transform: translate(0, -92.85714%); } }
+
+@keyframes filmstrip-14 {
+  /* line 48, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 48, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -92.85714%); } }
+
+@-moz-keyframes filmstrip-15 {
+  /* line 49, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 49, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -93.33333%);
+    transform: translate(0, -93.33333%); } }
+
+@-webkit-keyframes filmstrip-15 {
+  /* line 49, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 49, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -93.33333%);
+    transform: translate(0, -93.33333%); } }
+
+@-o-keyframes filmstrip-15 {
+  /* line 49, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 49, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -93.33333%);
+    transform: translate(0, -93.33333%); } }
+
+@-ms-keyframes filmstrip-15 {
+  /* line 49, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 49, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -93.33333%);
+    transform: translate(0, -93.33333%); } }
+
+@keyframes filmstrip-15 {
+  /* line 49, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 49, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -93.33333%); } }
+
+@-moz-keyframes filmstrip-16 {
+  /* line 50, ../sass/_filmstrip.scss */
+  from {
+    -moz-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 50, ../sass/_filmstrip.scss */
+  to {
+    -moz-transform: translate(0, -93.75%);
+    transform: translate(0, -93.75%); } }
+
+@-webkit-keyframes filmstrip-16 {
+  /* line 50, ../sass/_filmstrip.scss */
+  from {
+    -webkit-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 50, ../sass/_filmstrip.scss */
+  to {
+    -webkit-transform: translate(0, -93.75%);
+    transform: translate(0, -93.75%); } }
+
+@-o-keyframes filmstrip-16 {
+  /* line 50, ../sass/_filmstrip.scss */
+  from {
+    -o-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 50, ../sass/_filmstrip.scss */
+  to {
+    -o-transform: translate(0, -93.75%);
+    transform: translate(0, -93.75%); } }
+
+@-ms-keyframes filmstrip-16 {
+  /* line 50, ../sass/_filmstrip.scss */
+  from {
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%); }
+
+  /* line 50, ../sass/_filmstrip.scss */
+  to {
+    -ms-transform: translate(0, -93.75%);
+    transform: translate(0, -93.75%); } }
+
+@keyframes filmstrip-16 {
+  /* line 50, ../sass/_filmstrip.scss */
+  from {
+    transform: translate(0, 0%); }
+
+  /* line 50, ../sass/_filmstrip.scss */
+  to {
+    transform: translate(0, -93.75%); } }
+
+/* line 1, ../sass/_shared.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 5, ../sass/_shared.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Cutive Mono', georgia, serif; }
+
+/* line 17, ../sass/_shared.scss */
+body, #modal {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1e1e1e; }
+
+/* line 24, ../sass/_shared.scss */
+.left {
+  float: left !important; }
+
+/* line 25, ../sass/_shared.scss */
+.right {
+  float: right !important; }
+
+/* line 27, ../sass/_shared.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0; }
+
+/* line 33, ../sass/_shared.scss */
+.scrollbox {
+  overflow-y: auto;
+  pointer-events: all; }
+
+/* line 38, ../sass/_shared.scss */
+.focalpoint {
+  position: absolute;
+  max-width: initial;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0; }
+
+/* line 48, ../sass/_shared.scss */
+.content {
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0px; }
+
+/* line 53, ../sass/_shared.scss */
+.controls {
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 61, ../sass/_shared.scss */
+button {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  line-height: 26px;
+  height: 28px;
+  padding: 0 6px;
+  text-align: center;
+  min-width: 28px;
+  pointer-events: all;
+  z-index: 5;
+  cursor: pointer; }
+
+/* line 76, ../sass/_shared.scss */
+.btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  background-clip: padding-box;
+  cursor: pointer; }
+@media only screen and (min-width: 768px) {
+  /* line 76, ../sass/_shared.scss */
+  .btn {
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-transition: background-color 0.25s ease;
+    -moz-transition: background-color 0.25s ease;
+    -o-transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease; }
+  /* line 93, ../sass/_shared.scss */
+  .btn:hover, .btn:focus {
+    background-color: rgba(100, 100, 100, 0.5); }
+  /* line 97, ../sass/_shared.scss */
+  .btn.active {
+    background-color: rgba(120, 120, 120, 0.8); } }
+
+/* line 103, ../sass/_shared.scss */
+.prevbutton, .nextbutton {
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  position: absolute;
+  background-color: transparent;
+  border: 0;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+/* line 114, ../sass/_shared.scss */
+.prevbutton .btn, .nextbutton .btn {
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 30px;
+  line-height: 40px;
+  height: auto;
+  padding-top: 2px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05); }
+@media only screen and (min-width: 768px) {
+  /* line 114, ../sass/_shared.scss */
+  .prevbutton .btn, .nextbutton .btn {
+    margin-top: -28px;
+    width: 40px;
+    line-height: 56px; } }
+@media only screen and (min-width: 1280px) {
+  /* line 114, ../sass/_shared.scss */
+  .prevbutton .btn, .nextbutton .btn {
+    margin-top: -35px;
+    width: 50px;
+    line-height: 70px; } }
+
+/* line 137, ../sass/_shared.scss */
+.prevbutton {
+  right: initial;
+  left: 0; }
+/* line 137, ../sass/_shared.scss */
+.prevbutton .btn {
+  left: 0; }
+
+/* line 138, ../sass/_shared.scss */
+.nextbutton {
+  left: initial;
+  right: 0; }
+/* line 138, ../sass/_shared.scss */
+.nextbutton .btn {
+  right: 0; }
+
+/* line 140, ../sass/_shared.scss */
+.prevbutton.btn, .nextbutton.btn {
+  right: 0;
+  border-right: 0; }
+
+/* line 142, ../sass/_shared.scss */
+#loadingoverlay {
+  background: url(../assets/loading.png) no-repeat center;
+  background-size: 320px 490px;
+  background-color: black;
+  z-index: 100;
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: opacity 500ms linear;
+  -moz-transition: opacity 500ms linear;
+  -o-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+  opacity: 1; }
+/* line 151, ../sass/_shared.scss */
+#loadingoverlay.complete {
+  opacity: 0;
+  pointer-events: none; }
+/* line 155, ../sass/_shared.scss */
+.no-pointerevents #loadingoverlay.complete {
+  display: none; }
+/* line 158, ../sass/_shared.scss */
+#loadingoverlay span {
+  font-family: serif;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 70px;
+  line-height: 30px;
+  letter-spacing: -3px;
+  -webkit-animation: throb 800ms linear 200ms infinite;
+  -moz-animation: throb 800ms linear 200ms infinite;
+  -ms-animation: throb 800ms linear 200ms infinite;
+  -o-animation: throb 800ms linear 200ms infinite;
+  animation: throb 800ms linear 200ms infinite; }
+/* line 171, ../sass/_shared.scss */
+#loadingoverlay span:before {
+  content: ".";
+  -webkit-animation: throb 800ms linear 0 infinite;
+  -moz-animation: throb 800ms linear 0 infinite;
+  -ms-animation: throb 800ms linear 0 infinite;
+  -o-animation: throb 800ms linear 0 infinite;
+  animation: throb 800ms linear 0 infinite; }
+/* line 175, ../sass/_shared.scss */
+#loadingoverlay span:after {
+  content: ".";
+  -webkit-animation: throb 800ms linear 400ms infinite;
+  -moz-animation: throb 800ms linear 400ms infinite;
+  -ms-animation: throb 800ms linear 400ms infinite;
+  -o-animation: throb 800ms linear 400ms infinite;
+  animation: throb 800ms linear 400ms infinite; }
+
+@-moz-keyframes throb {
+  /* line 183, ../sass/_shared.scss */
+  0% {
+    color: rgba(255, 255, 255, 0.5); }
+
+  /* line 184, ../sass/_shared.scss */
+  50% {
+    color: white; }
+
+  /* line 185, ../sass/_shared.scss */
+  100% {
+    color: rgba(255, 255, 255, 0.5); } }
+
+@-webkit-keyframes throb {
+  /* line 183, ../sass/_shared.scss */
+  0% {
+    color: rgba(255, 255, 255, 0.5); }
+
+  /* line 184, ../sass/_shared.scss */
+  50% {
+    color: white; }
+
+  /* line 185, ../sass/_shared.scss */
+  100% {
+    color: rgba(255, 255, 255, 0.5); } }
+
+@-o-keyframes throb {
+  /* line 183, ../sass/_shared.scss */
+  0% {
+    color: rgba(255, 255, 255, 0.5); }
+
+  /* line 184, ../sass/_shared.scss */
+  50% {
+    color: white; }
+
+  /* line 185, ../sass/_shared.scss */
+  100% {
+    color: rgba(255, 255, 255, 0.5); } }
+
+@-ms-keyframes throb {
+  /* line 183, ../sass/_shared.scss */
+  0% {
+    color: rgba(255, 255, 255, 0.5); }
+
+  /* line 184, ../sass/_shared.scss */
+  50% {
+    color: white; }
+
+  /* line 185, ../sass/_shared.scss */
+  100% {
+    color: rgba(255, 255, 255, 0.5); } }
+
+@keyframes throb {
+  /* line 183, ../sass/_shared.scss */
+  0% {
+    color: rgba(255, 255, 255, 0.5); }
+
+  /* line 184, ../sass/_shared.scss */
+  50% {
+    color: white; }
+
+  /* line 185, ../sass/_shared.scss */
+  100% {
+    color: rgba(255, 255, 255, 0.5); } }
+
+/* line 189, ../sass/_shared.scss */
+#shareoverlay {
+  background-color: rgba(120, 120, 120, 0.8);
+  z-index: 99;
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: opacity 500ms linear;
+  -moz-transition: opacity 500ms linear;
+  -o-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+  opacity: 0;
+  pointer-events: none; }
+/* line 197, ../sass/_shared.scss */
+.no-pointerevents #shareoverlay {
+  display: none; }
+@media only screen and (min-width: 768px) {
+  /* line 189, ../sass/_shared.scss */
+  #shareoverlay {
+    bottom: 35px;
+    height: auto; } }
+/* line 204, ../sass/_shared.scss */
+#shareoverlay.active {
+  display: block;
+  pointer-events: all;
+  opacity: 1; }
+/* line 210, ../sass/_shared.scss */
+#shareoverlay > .modal {
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: auto;
+  width: 400px;
+  max-width: 90%;
+  height: 260px;
+  max-height: 90%;
+  padding: 2em 1.5em 1em; }
+
+/* line 225, ../sass/_shared.scss */
+.socials {
+  margin: auto; }
+
+/* line 229, ../sass/_shared.scss */
+.socials td, .socials th {
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0; }
+
+/* line 234, ../sass/_shared.scss */
+.socials tr:last-child td, .socials tr:last-child th {
+  border: 0; }
+
+/* line 237, ../sass/_shared.scss */
+.socials th {
+  text-align: right;
+  font-family: "Source Sans Pro", Helvetica, arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility; }
+
+/* line 246, ../sass/_shared.scss */
+.socials td {
+  padding-left: 8px;
+  vertical-align: middle; }
+
+/* line 251, ../sass/_shared.scss */
+.socials input[type=text], .socials textarea {
+  width: 100%;
+  max-height: 3em;
+  border: 1px solid #888;
+  resize: none; }
+
+/* line 258, ../sass/_shared.scss */
+.socials a.visit-us {
+  float: left;
+  margin-right: 8px;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  -o-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease; }
+
+/* line 264, ../sass/_shared.scss */
+.socials a.visit-us:hover {
+  opacity: 0.5; }
+
+/* line 266, ../sass/_shared.scss */
+.close-modal {
+  font-size: 1.375em;
+  line-height: 1;
+  position: absolute;
+  top: 0.5em;
+  right: 0.6875em;
+  color: #aaaaaa;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 283, ../sass/_shared.scss */
+.bottombar {
+  font-family: arial, serif;
+  font-size: 12px;
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  -webkit-transform: translateY(42px);
+  -moz-transform: translateY(42px);
+  -ms-transform: translateY(42px);
+  -o-transform: translateY(42px);
+  transform: translateY(42px);
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out; }
+
+/* line 296, ../sass/_shared.scss */
+.bottombar.active {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0); }
+
+/* line 300, ../sass/_shared.scss */
+.page-number {
+  width: 55px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  background-clip: padding-box; }
+
+/* line 316, ../sass/_shared.scss */
+.bottombar .fullscreen.btn, .bottombar .share.btn {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 35px;
+  line-height: 34px;
+  border-width: 1px 0 0 1px; }
+
+/* line 326, ../sass/_shared.scss */
+.bottombar .share.btn {
+  right: 55px; }
+/* line 328, ../sass/_shared.scss */
+.share.btn > div {
+  border: 1px solid #fff;
+  border-color: #fff #fff transparent transparent;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -7px; }
+/* line 340, ../sass/_shared.scss */
+.share.btn > div div {
+  width: 0;
+  height: 0;
+  border: 2px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute; }
+/* line 347, ../sass/_shared.scss */
+.share.btn > div div:nth-child(1) {
+  top: -2px;
+  left: -2px; }
+/* line 348, ../sass/_shared.scss */
+.share.btn > div div:nth-child(2) {
+  top: -2px;
+  right: -2px; }
+/* line 349, ../sass/_shared.scss */
+.share.btn > div div:nth-child(3) {
+  bottom: -2px;
+  right: -2px; }
+
+/* line 354, ../sass/_shared.scss */
+.fullscreen.btn {
+  right: 95px; }
+/* line 357, ../sass/_shared.scss */
+.fullscreen.btn div {
+  border: 2px solid #fff;
+  width: 4px;
+  height: 4px;
+  position: absolute; }
+/* line 361, ../sass/_shared.scss */
+.fullscreen.btn div:nth-child(1) {
+  top: 11px;
+  left: 11px;
+  border-width: 2px 0 0 2px; }
+/* line 362, ../sass/_shared.scss */
+.fullscreen.btn div:nth-child(2) {
+  top: 11px;
+  right: 11px;
+  border-width: 2px 2px 0 0; }
+/* line 363, ../sass/_shared.scss */
+.fullscreen.btn div:nth-child(3) {
+  bottom: 11px;
+  left: 11px;
+  border-width: 0 0 2px 2px; }
+/* line 364, ../sass/_shared.scss */
+.fullscreen.btn div:nth-child(4) {
+  bottom: 11px;
+  right: 11px;
+  border-width: 0 2px 2px 0; }
+
+/* line 369, ../sass/_shared.scss */
+.no-fullscreen .fullscreen.btn {
+  display: none; }
+
+/* line 371, ../sass/_shared.scss */
+html:-moz-full-screen .fullscreen.btn {
+  display: none; }
+
+/* line 372, ../sass/_shared.scss */
+html:-webkit-full-screen .fullscreen.btn {
+  display: none; }
+
+/* line 373, ../sass/_shared.scss */
+html:fullscreen .fullscreen.btn {
+  display: none; }
+
+/* line 1, ../sass/_audioplayer.scss */
+.audioplayer {
+  height: 35px;
+  /* 40 */
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 135px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff; }
+@media only screen and (min-width: 768px) {
+  /* line 1, ../sass/_audioplayer.scss */
+  .audioplayer {
+    background-color: rgba(0, 0, 0, 0.8); } }
+
+/* line 18, ../sass/_audioplayer.scss */
+.no-fullscreen .audioplayer {
+  right: 95px; }
+
+/* line 20, ../sass/_audioplayer.scss */
+html:-moz-full-screen .audioplayer {
+  right: 95px; }
+
+/* line 21, ../sass/_audioplayer.scss */
+html:-webkit-full-screen .audioplayer {
+  right: 95px; }
+
+/* line 22, ../sass/_audioplayer.scss */
+html:fullscreen .audioplayer {
+  right: 95px; }
+
+/* mini mode (fallback) */
+/* line 27, ../sass/_audioplayer.scss */
+.audioplayer-mini {
+  width: 40px;
+  /* 40 */
+  margin: 0 auto; }
+
+/* player elements: play/pause and volume buttons, played/duration timers, progress bar of loaded/played */
+/* line 34, ../sass/_audioplayer.scss */
+.audioplayer > div {
+  position: absolute; }
+
+/* play/pause button */
+/* line 38, ../sass/_audioplayer.scss */
+.audioplayer-playpause {
+  width: 40px;
+  height: 100%;
+  text-align: left;
+  text-indent: -9999px;
+  cursor: pointer;
+  z-index: 2;
+  top: 0;
+  left: 0; }
+
+/* line 52, ../sass/_audioplayer.scss */
+.audioplayer-mini .audioplayer-playpause {
+  width: 100%; }
+
+/* line 56, ../sass/_audioplayer.scss */
+.audioplayer-playpause:hover, .audioplayer-playpause:focus {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+/* line 59, ../sass/_audioplayer.scss */
+.audioplayer-playpause a {
+  display: block; }
+
+/* line 62, ../sass/_audioplayer.scss */
+.audioplayer-stopped .audioplayer-playpause a {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  /* 8 */
+  border-right: none;
+  border-left-color: #fff;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -4px;
+  /* 8 4 */ }
+
+/* line 74, ../sass/_audioplayer.scss */
+.audioplayer-playing .audioplayer-playpause a {
+  width: 12px;
+  /* 12 */
+  height: 12px;
+  /* 12 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+  /* 6 */ }
+
+/* line 83, ../sass/_audioplayer.scss */
+.audioplayer-playing .audioplayer-playpause a:before, .audioplayer-playing .audioplayer-playpause a:after {
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  top: 0; }
+
+/* line 91, ../sass/_audioplayer.scss */
+.audioplayer-playing .audioplayer-playpause a:before {
+  left: 0; }
+
+/* line 94, ../sass/_audioplayer.scss */
+.audioplayer-playing .audioplayer-playpause a:after {
+  right: 0; }
+
+/* timers */
+/* line 101, ../sass/_audioplayer.scss */
+.audioplayer-time {
+  height: 100%;
+  line-height: 35px;
+  /* 38 */
+  z-index: 2;
+  top: 0;
+  float: right; }
+
+/* line 109, ../sass/_audioplayer.scss */
+.audioplayer-time-current {
+  right: 40px;
+  /* 40 */ }
+/* line 112, ../sass/_audioplayer.scss */
+.audioplayer-time-current:after {
+  content: "  /  "; }
+
+@media (min-width: 462px) {
+  /* line 116, ../sass/_audioplayer.scss */
+  .audioplayer-time-current:before {
+    content: "Young Unknowns – I Want To Lose  •  ";
+    color: #BFBDC9; } }
+/* line 119, ../sass/_audioplayer.scss */
+.audioplayer-time-duration {
+  width: 38px;
+  right: 0px; }
+
+/* progress bar of loaded/played */
+/* line 127, ../sass/_audioplayer.scss */
+.audioplayer-bar {
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+  top: 0;
+  left: 40px;
+  right: 0px; }
+@media only screen and (min-width: 768px) {
+  /* line 127, ../sass/_audioplayer.scss */
+  .audioplayer-bar {
+    left: 80px; } }
+
+/* line 139, ../sass/_audioplayer.scss */
+.audioplayer-novolume .audioplayer-bar {
+  left: 40px; }
+
+/* line 142, ../sass/_audioplayer.scss */
+.audioplayer-bar div {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/* line 149, ../sass/_audioplayer.scss */
+.audioplayer-bar-loaded {
+  background-color: rgba(116, 116, 116, 0.4);
+  z-index: 1; }
+
+/* line 153, ../sass/_audioplayer.scss */
+.audioplayer-bar-played {
+  background: #2a223a;
+  background: rgba(96, 74, 140, 0.8);
+  z-index: 2; }
+
+/* volume button */
+/* line 164, ../sass/_audioplayer.scss */
+.audioplayer-volume {
+  display: none;
+  width: 40px;
+  height: 100%;
+  text-align: left;
+  text-indent: -9999px;
+  cursor: pointer;
+  z-index: 2;
+  top: 0;
+  left: 40px; }
+@media only screen and (min-width: 768px) {
+  /* line 164, ../sass/_audioplayer.scss */
+  .audioplayer-volume {
+    display: block; } }
+
+/* line 182, ../sass/_audioplayer.scss */
+.audioplayer-volume:hover, .audioplayer-volume:focus {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+/* line 185, ../sass/_audioplayer.scss */
+.audioplayer-volume-button {
+  width: 100%;
+  height: 100%; }
+
+/* line 189, ../sass/_audioplayer.scss */
+.audioplayer-volume-button a {
+  width: 5px;
+  /* 5 */
+  height: 6px;
+  /* 6 */
+  background-color: #fff;
+  display: block;
+  position: relative;
+  z-index: 1;
+  top: 40%;
+  left: 35%; }
+
+/* line 200, ../sass/_audioplayer.scss */
+.audioplayer-volume-button a:before, .audioplayer-volume-button a:after {
+  content: '';
+  position: absolute; }
+
+/* line 204, ../sass/_audioplayer.scss */
+.audioplayer-volume-button a:before {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  /* 8 */
+  border-left: none;
+  border-right-color: #fff;
+  z-index: 2;
+  top: 50%;
+  right: -4px;
+  margin-top: -8px;
+  /* 8 */ }
+
+/* line 215, ../sass/_audioplayer.scss */
+.audioplayer:not(.audioplayer-muted) .audioplayer-volume-button a:after {
+  /* "volume" icon by Nicolas Gallagher, http://nicolasgallagher.com/pure-css-gui-icons */
+  width: 5px;
+  /* 5 */
+  height: 5px;
+  /* 5 */
+  border: 4px double #fff;
+  /* 4 */
+  border-width: 4px 4px 0 0;
+  /* 4 */
+  left: 9px;
+  /* 9 */
+  top: -1px;
+  /* 1 */
+  -webkit-border-radius: 0 15px 0 0;
+  /* 15 */
+  -moz-border-radius: 0 15px 0 0;
+  /* 15 */
+  border-radius: 0 15px 0 0;
+  /* 15 */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+/* volume dropdown */
+/* line 236, ../sass/_audioplayer.scss */
+.audioplayer-volume-adjust {
+  height: 100px;
+  /* 100 */
+  cursor: default;
+  position: absolute;
+  left: 0;
+  right: -1px;
+  top: -9999px;
+  background: #333; }
+
+/* line 245, ../sass/_audioplayer.scss */
+.audioplayer-volume:not(:hover) .audioplayer-volume-adjust {
+  opacity: 0; }
+
+/* line 248, ../sass/_audioplayer.scss */
+.audioplayer-volume:hover .audioplayer-volume-adjust {
+  top: auto;
+  bottom: 100%; }
+
+/* line 252, ../sass/_audioplayer.scss */
+.audioplayer-volume-adjust > div {
+  width: 40%;
+  height: 80%;
+  background-color: #222;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  margin: 30% auto 0; }
+
+/* line 261, ../sass/_audioplayer.scss */
+.audioplayer-volume-adjust div div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(96, 74, 140, 0.8); }
+
+/* line 269, ../sass/_audioplayer.scss */
+.audioplayer-novolume .audioplayer-volume {
+  display: none; }
+
+/* line 276, ../sass/_audioplayer.scss */
+.audioplayer *, .audioplayer *:before, .audioplayer *:after {
+  -webkit-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+  -moz-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+  -ms-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+  -o-transition: color .25s ease, background-color .25s ease, opacity .5s ease;
+  transition: color .25s ease, background-color .25s ease, opacity .5s ease; }
+
+/* line 1, ../sass/_custom.scss */
+body {
+  background-color: #080039; }
+
+/* line 3, ../sass/_custom.scss */
+.stroked {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+  background-color: #080039;
+  font-size: 1em;
+  line-height: 2.5em;
+  min-height: 2.5em; }
+/* line 18, ../sass/_custom.scss */
+.stroked canvas {
+  position: absolute; }
+/* line 22, ../sass/_custom.scss */
+.stroked span {
+  position: relative;
+  top: -1px; }
+
+/* line 25, ../sass/_custom.scss */
+.ready .stroked span {
+  top: initial; }
+
+/* line 27, ../sass/_custom.scss */
+.spaced {
+  margin-top: 0; }
+
+/* line 29, ../sass/_custom.scss */
+.textBlock {
+  position: absolute;
+  display: block; }
+/* line 31, ../sass/_custom.scss */
+.textBlock.ready {
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8); }
+@media only screen and (min-width: 768px) {
+  /* line 31, ../sass/_custom.scss */
+  .textBlock.ready {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+
+/* line 46, ../sass/_custom.scss */
+.pre {
+  white-space: pre; }
+
+/* line 48, ../sass/_custom.scss */
+.hurricane.stroked, .hurricane .stroked {
+  color: #080039;
+  background-color: #fff;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1); }
+
+/* line 57, ../sass/_custom.scss */
+.silohuette {
+  background-image: url("../assets/meredith_silohuette.png");
+  background-color: rgba(40, 30, 70, 0.6); }
+
+/* line 62, ../sass/_custom.scss */
+.sidewalk {
+  background-image: url("../assets/meredith_sidewalk-bw.png"); }
+
+/* line 68, ../sass/_custom.scss */
+.weirdtexture {
+  -webkit-transition: opacity 5s ease-in;
+  -webkit-transition-delay: 1000ms;
+  -moz-transition: opacity 5s ease-in 1000ms;
+  -o-transition: opacity 5s ease-in 1000ms;
+  transition: opacity 5s ease-in 1000ms;
+  background-image: url("../assets/texture-optim.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0; }
+
+/* line 75, ../sass/_custom.scss */
+.page-7 .weirdtexture {
+  opacity: 1; }
+
+/* line 79, ../sass/_custom.scss */
+.gate {
+  background-image: url("../assets/meredith_gate.png");
+  background-position: 80% 0% !important; }
+
+/* line 85, ../sass/_custom.scss */
+.water {
+  background-image: url("../assets/meredith_gate-water.jpg");
+  background-position: 80% 0% !important; }
+
+/* line 92, ../sass/_custom.scss */
+.auto {
+  background-image: url("../assets/auto-color.jpg"); }
+
+/* line 98, ../sass/_custom.scss */
+.credits {
+  margin-top: -17.5px;
+  width: 432px;
+  height: 600px;
+  max-width: 85%;
+  max-height: 85%;
+  background: url("../assets/credits.png") no-repeat center;
+  background-size: contain; }
